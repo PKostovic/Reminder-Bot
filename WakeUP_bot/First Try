@@ -1,0 +1,30 @@
+import java.io.IOException;
+import com.techventus.server.voice.Voice;
+
+public class main_WUB {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String username = "wake.up.bot.acc";
+		String password = "wakeupbotacc";
+		String pavlePhone = "14142183060";
+		String message = "Hello, you're supposed to be doing something right"
+				+ " now! \n \nI am a bot, beep boop.";
+		
+		
+		try {
+			Voice voice = new Voice(username, password);
+			voice.sendSMS(pavlePhone, message);
+
+			//voice.call(originNumber, pavlePhone, "1");
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}
